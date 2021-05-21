@@ -1,0 +1,215 @@
+$bg-color: #e8e8e8;
+$ele-bg-color1: #24292e;
+$ele-bg-color2: #191919;
+$vector-accent: #282828;
+$action-focus: #0366d6;
+$input-focus: #2188ff;
+$resizer-button-bg-color: #444d56;
+
+$theme-font: brandon-grotesque, sans-serif;
+$theme-font-color1: #f2f2f2;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $theme-font;
+}
+
+.main-layout {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-color;
+}
+
+.nav-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+#arammaliachi-logo {
+  height: 5.5rem;
+}
+
+#arammaliachi-logo:hover {
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.header-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.header-bar {
+  height: 0.5rem;
+  background-size: 800% 100%;
+  animation: resizer-aurora infinite 60s alternate;
+  opacity: 0.3;
+  background-image: linear-gradient(
+    to right,
+    hsla(260, 100%, 50%, 1),
+    hsla(300, 100%, 50%, 1),
+    hsla(220, 100%, 50%, 1),
+    hsla(120, 100%, 50%, 1),
+    hsla(200, 100%, 50%, 1),
+    hsla(240, 100%, 50%, 1),
+    hsla(300, 100%, 50%, 1),
+    hsla(360, 100%, 50%, 1)
+  );
+}
+
+.header-title-container {
+  display: inline-block;
+  background-size: 500% 100%;
+  animation: resizer-aurora infinite 60s alternate;
+  opacity: 0.34;
+}
+
+.header-title {
+  margin: 0;
+  padding: 0 3rem 0 3rem;
+}
+
+@keyframes resizer-aurora {
+  0% {
+    background-position-x: left;
+  }
+  100% {
+    background-position-x: right;
+  }
+}
+
+// .nav-elasticsearch {
+//   display: flex;
+//   justify-content: center;
+//   width: 80%;
+// }
+
+// .elasticsearch-input {
+//   width: 95%;
+//   border: 1px solid $vector-accent;
+//   border-radius: 10px;
+//   background-color: $ele-bg-color1;
+//   outline: none !important; // Microsoft Edge
+//   color: $theme-font-color1;
+// }
+
+// .elasticsearch-input:focus {
+//   outline: none !important; // Safari
+//   border: 3px solid $action-focus;
+// }
+
+// .nav-categorymenu {
+//   display: none;
+// }
+
+// #categorymenu-arrow {
+//   // Safari and Edge require both width and height to be defined
+//   width: 80%;
+//   height: 35%;
+// }
+
+// .container {
+//   display: flex;
+//   height: 100%;
+//   padding: 0;
+//   margin: 0;
+// }
+
+// .resizer {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   justify-content: flex-start;
+//   align-items: center;
+//   padding-top: 1%;
+//   animation: resizer-aurora infinite 60s alternate;
+//   background-size: 100% 1000%;
+//   opacity: 0.8;
+//   background-image: linear-gradient(
+//     hsla(260, 100%, 50%, 1),
+//     hsla(300, 100%, 50%, 1),
+//     hsla(220, 100%, 50%, 1),
+//     hsla(120, 100%, 50%, 1),
+//     hsla(200, 100%, 50%, 1),
+//     hsla(240, 100%, 50%, 1),
+//     hsla(300, 100%, 50%, 1),
+//     hsla(360, 100%, 50%, 1)
+//   );
+// }
+
+// div.resizer:hover,
+// div.resizer:active {
+//   cursor: col-resize;
+//   background-image: linear-gradient(
+//     hsla(260, 100%, 50%, 0.8),
+//     hsla(300, 100%, 50%, 0.8),
+//     hsla(220, 100%, 50%, 0.8),
+//     hsla(120, 100%, 50%, 0.8),
+//     hsla(200, 100%, 50%, 0.8),
+//     hsla(240, 100%, 50%, 0.8),
+//     hsla(300, 100%, 50%, 0.8),
+//     hsla(360, 100%, 50%, 0.8)
+//   );
+// }
+
+// .resizer-floating-button {
+//   width: 2.555rem;
+//   height: 2.555rem;
+//   margin: 0.25rem 0 0.25rem 0;
+//   border-radius: 0.35rem;
+//   background-color: $resizer-button-bg-color;
+//   color: $theme-font-color1;
+//   font-weight: 700;
+//   font-size: 1.125rem;
+// }
+
+// button.resizer-floating-button:hover {
+//   background-color: $action-focus;
+// }
+
+// @keyframes resizer-aurora {
+//   0% {
+//     background-position-y: top;
+//   }
+//   100% {
+//     background-position-y: bottom;
+//   }
+// }
+
+// // Desktop screen Sizes
+// @media only screen and (min-width: 768px) {
+//   .nav-elasticsearch {
+//     width: 45%;
+//     order: -1;
+//   }
+//   .nav-logo {
+//     display: flex;
+//     justify-content: space-around;
+//     width: 10%;
+//   }
+//   .nav-categorymenu {
+//     display: flex;
+//   }
+
+//   .nav-categorymenu button {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: $ele-bg-color1;
+//     border-radius: 0.35rem 0 0 0.35rem;
+//     height: 100%;
+//     width: 1.5rem;
+//   }
+
+//   .nav-categorymenu button:hover {
+//     background-color: $ele-bg-color2;
+//   }
+// }
